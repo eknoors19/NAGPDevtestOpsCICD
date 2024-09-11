@@ -1,0 +1,9 @@
+# Created at 2024-04-21T18:58:38.412
+SecurityError: Permission denied to access property "pageXOffset" on cross-origin object
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [5fd62e3a-61e6-4abf-97b8-3282d17b3912, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 125.0.1, moz:accessibilityChecks: false, moz:buildID: 20240416043247, moz:debuggerAddress: 127.0.0.1:3234, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 35052, moz:profile: C:\Users\EKNOOR~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:3234/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 5fd62e3a-61e6-4abf-97b8-3282d17b3912
+
