@@ -34,11 +34,7 @@ public class ExtentReporter {
 			  if (!dest.exists()) 
 			  { dest.mkdir(); }
 			  File[] content = src.listFiles(); 
-				/*
-				 * for (int i = 0; i < content.length; i++) { String name =
-				 * content[i].getName(); File destDir = new File(destDirPath +"//" + name);
-				 * content[i].renameTo(destDir); }
-				 */
+				
 			  for (int i = 0; i < content.length; i++) {
 				    String name = content[i].getName(); 
 				    File destDir = new File(destDirPath + "//" + name); 
@@ -75,7 +71,7 @@ public class ExtentReporter {
 			 fisConfigProp = new FileInputStream(configPropFile);
 			configProp.load(fisConfigProp);
 		}catch(Throwable e) {
-			//e.printStackTrace();
+			
 		}
 		finally
         {

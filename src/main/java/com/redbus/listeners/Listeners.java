@@ -24,7 +24,7 @@ public class Listeners implements ITestListener{
 			extentReport=ExtentReporter.generateExtentReport();
 		} catch (IOException e) {
 		
-			//e.printStackTrace();
+			
 		}
 		System.out.println("Execution of Project Test Started");
 	}
@@ -54,12 +54,10 @@ public class Listeners implements ITestListener{
 		try {
 			driver = (WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
 		} catch (IllegalArgumentException | IllegalAccessException | NoSuchFieldException | SecurityException e) {
-			//e.printStackTrace();
+			
 		}
 		
-		//String destinationScreenshotPath= Utilities.captureScreenshot(driver, testName);
 		
-		//extentTest.addScreenCaptureFromPath(destinationScreenshotPath);
 		extentTest.log(Status.INFO, result.getThrowable());
 		extentTest.log(Status.FAIL, testName + " got failed");
 		System.out.println(testName + " got failed");
