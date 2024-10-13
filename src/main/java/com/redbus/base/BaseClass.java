@@ -40,7 +40,7 @@ public class BaseClass {
 			prop.load(fis);
 		}catch(Exception e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
         {
@@ -55,7 +55,7 @@ public class BaseClass {
 			dataProp.load(dataFis);
 		}catch(Throwable e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
         {
