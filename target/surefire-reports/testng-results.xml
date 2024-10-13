@@ -2,34 +2,34 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-13T12:13:19 IST" name="Suite" finished-at="2024-10-13T12:13:29 IST" duration-ms="9128">
+  <suite started-at="2024-10-13T14:08:00 IST" name="Suite" finished-at="2024-10-13T14:08:12 IST" duration-ms="11720">
     <groups>
     </groups>
-    <test started-at="2024-10-13T12:13:19 IST" name="Amazon Test Cases" finished-at="2024-10-13T12:13:29 IST" duration-ms="9128">
+    <test started-at="2024-10-13T14:08:00 IST" name="Amazon Test Cases" finished-at="2024-10-13T14:08:12 IST" duration-ms="11720">
       <class name="com.redbus.testcases.AmazLandingPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.redbus.testcases.AmazLandingPageTest@3b220bcb]" started-at="2024-10-13T12:13:20 IST" name="setup" finished-at="2024-10-13T12:13:27 IST" duration-ms="7200" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.redbus.testcases.AmazLandingPageTest@6f3c660a]" started-at="2024-10-13T14:08:01 IST" name="setup" finished-at="2024-10-13T14:08:09 IST" duration-ms="8279" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyHomePageTitle()[pri:1, instance:com.redbus.testcases.AmazLandingPageTest@3b220bcb]" started-at="2024-10-13T12:13:27 IST" name="verifyHomePageTitle" finished-at="2024-10-13T12:13:27 IST" duration-ms="393" status="PASS">
+        <test-method signature="verifyHomePageTitle()[pri:1, instance:com.redbus.testcases.AmazLandingPageTest@6f3c660a]" started-at="2024-10-13T14:08:09 IST" name="verifyHomePageTitle" finished-at="2024-10-13T14:08:11 IST" duration-ms="2472" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomePageTitle -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.redbus.testcases.AmazLandingPageTest@3b220bcb]" started-at="2024-10-13T12:13:27 IST" name="tearDown" finished-at="2024-10-13T12:13:29 IST" duration-ms="1225" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.redbus.testcases.AmazLandingPageTest@6f3c660a]" started-at="2024-10-13T14:08:11 IST" name="tearDown" finished-at="2024-10-13T14:08:12 IST" duration-ms="672" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.redbus.testcases.AmazLandingPageTest -->
       <class name="com.redbus.testcases.CalculatorTest">
-        <test-method signature="testAdd()[pri:0, instance:com.redbus.testcases.CalculatorTest@650eab8]" started-at="2024-10-13T12:13:29 IST" name="testAdd" finished-at="2024-10-13T12:13:29 IST" duration-ms="1" status="PASS">
+        <test-method signature="testAdd()[pri:0, instance:com.redbus.testcases.CalculatorTest@4748a0f9]" started-at="2024-10-13T14:08:12 IST" name="testAdd" finished-at="2024-10-13T14:08:12 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAdd -->
-        <test-method signature="testFailedAdd()[pri:0, instance:com.redbus.testcases.CalculatorTest@650eab8]" started-at="2024-10-13T12:13:29 IST" name="testFailedAdd" finished-at="2024-10-13T12:13:29 IST" duration-ms="1" status="PASS">
+        <test-method signature="testFailedAdd()[pri:0, instance:com.redbus.testcases.CalculatorTest@4748a0f9]" started-at="2024-10-13T14:08:12 IST" name="testFailedAdd" finished-at="2024-10-13T14:08:12 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFailedAdd -->
-        <test-method signature="testSub()[pri:0, instance:com.redbus.testcases.CalculatorTest@650eab8]" started-at="2024-10-13T12:13:29 IST" name="testSub" finished-at="2024-10-13T12:13:29 IST" duration-ms="1" status="PASS">
+        <test-method signature="testSub()[pri:0, instance:com.redbus.testcases.CalculatorTest@4748a0f9]" started-at="2024-10-13T14:08:12 IST" name="testSub" finished-at="2024-10-13T14:08:12 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSub -->

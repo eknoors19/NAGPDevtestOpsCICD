@@ -1,0 +1,9 @@
+com\redbus\testcases\HelpTest.class
+com\redbus\testcases\AmazAddToCartTest.class
+com\redbus\testcases\AmazSearchTest.class
+com\redbus\testcases\LoginTest.class
+com\redbus\testcases\SearchTrainTest.class
+com\redbus\testcases\AmazLandingPageTest.class
+com\redbus\testcases\LandingPageTest.class
+com\redbus\testcases\CalculatorTest.class
+com\redbus\testcases\SearchRedBusTest.class

@@ -8,7 +8,7 @@
   <test thread-count="5" name="Amazon Test Cases">
     <classes>	 
       
-      <class name="com.redbus.testcases.AmazLandingPageTest"/>
+      
       <class name="com.redbus.testcases.CalculatorTest"/>
       
 	  
