@@ -1,28 +1,16 @@
 package com.redbus.utility;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.time.Duration;
-import java.util.Date;
-import java.util.NoSuchElementException;
+
 import java.util.Set;
 
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.io.FileHandler;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.aventstack.extentreports.Status;
+
+
 
 public class Utilities {
 	
@@ -33,7 +21,6 @@ public class Utilities {
 	
 	public static void navigateToLogin(WebDriver driver) throws Exception
 	{
-		String redBusWindow = driver.getWindowHandle();
 		//String accountDropMenu = driver.findElement(By.cssSelector("book-app[apptitle='BOOKS'] .books-desc")).getText();
 		//System.out.print(accountDropMenu);
 		WebElement accountDropMenu = driver.findElement(By.xpath("//span[text()='Account']"));

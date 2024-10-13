@@ -18,9 +18,10 @@ public class ExtentReporter {
 		Date d=new Date();
         String fileName=d.toString().replace(":", "_").replace(" ", "_")+".html";
         System.out.println(" File Name: "+fileName);
-        		
-		String srcDirPath = System.getProperty("user.dir") +"//ExtentReports//CurrentTestResults"; 
-		String destDirPath = System.getProperty("user.dir") + "//ExtentReports//ArchivedTestResults";
+        
+        String userDirectory = System.getProperty("user.dir");
+		String srcDirPath = userDirectory +"//ExtentReports//CurrentTestResults"; 
+		String destDirPath = userDirectory + "//ExtentReports//ArchivedTestResults";
 		  
 		File src = new File(srcDirPath); 
 		File dest = new File(destDirPath); 
@@ -41,7 +42,7 @@ public class ExtentReporter {
 			  } 
 		  }
 		 
-	    File extentReportFile = new File(System.getProperty("user.dir")+ "\\ExtentReports\\CurrentTestResults\\extentReport_"+fileName);
+	    File extentReportFile = new File(userDirectory+ "\\ExtentReports\\CurrentTestResults\\extentReport_"+fileName);
 		ExtentSparkReporter sparkReporter = new ExtentSparkReporter(extentReportFile);
 		
 		sparkReporter.config().setTheme(Theme.DARK);
@@ -52,7 +53,7 @@ public class ExtentReporter {
 		extentReport.attachReporter(sparkReporter);
 		
 		Properties configProp = new Properties();
-		File configPropFile = new File(System.getProperty("user.dir")+"\\src\\main\\java\\com\\redbus\\config\\config.properties");
+		File configPropFile = new File(userDirectory+"\\src\\main\\java\\com\\redbus\\config\\config.properties");
 		
 		FileInputStream fisConfigProp =null;
 		try {

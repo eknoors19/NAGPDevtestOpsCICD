@@ -11,7 +11,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.redbus.utility.ExtentReporter;
-import com.redbus.utility.Utilities;
+
 
 public class Listeners implements ITestListener{
 	
@@ -23,7 +23,7 @@ public class Listeners implements ITestListener{
 		try {
 			extentReport=ExtentReporter.generateExtentReport();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		
 			//e.printStackTrace();
 		}
 		System.out.println("Execution of Project Test Started");
