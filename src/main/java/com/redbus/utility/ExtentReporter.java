@@ -34,12 +34,27 @@ public class ExtentReporter {
 			  if (!dest.exists()) 
 			  { dest.mkdir(); }
 			  File[] content = src.listFiles(); 
-			  for (int i = 0; i < content.length; i++) 
-			  {
-				  String name = content[i].getName(); 
-				  File destDir = new File(destDirPath +"//" + name); 
-				  content[i].renameTo(destDir); 
-			  } 
+				/*
+				 * for (int i = 0; i < content.length; i++) { String name =
+				 * content[i].getName(); File destDir = new File(destDirPath +"//" + name);
+				 * content[i].renameTo(destDir); }
+				 */
+			  for (int i = 0; i < content.length; i++) {
+				    String name = content[i].getName(); 
+				    File destDir = new File(destDirPath + "//" + name); 
+				    
+				    // Capture the boolean return value
+				    boolean isRenamed = content[i].renameTo(destDir);
+				    
+				    // Check if renaming was successful
+				    if (isRenamed) {
+				        System.out.println("Successfully renamed: " + name);
+				    } else {
+				        System.out.println("Failed to rename: " + name);
+				        // Handle the failure case here (e.g., logging, retry logic, etc.)
+				    }
+				}
+
 		  }
 		 
 	    File extentReportFile = new File(userDirectory+ "\\ExtentReports\\CurrentTestResults\\extentReport_"+fileName);
