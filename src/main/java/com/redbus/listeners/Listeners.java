@@ -49,6 +49,7 @@ public class Listeners implements ITestListener{
 		String testName = result.getName();
 		
 		System.out.println("ScreenShot Taken");
+		@SuppressWarnings("unused")
 		WebDriver driver=null;
 		try {
 			driver = (WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
