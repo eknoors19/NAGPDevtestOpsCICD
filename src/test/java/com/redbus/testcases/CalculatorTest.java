@@ -3,11 +3,18 @@ package com.redbus.testcases;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotSame;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 import com.redbus.base.BaseClass;
 
 public class CalculatorTest extends BaseClass{
+
+	public CalculatorTest() throws IOException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	public int add(int a, int b) {
 		return a + b;
