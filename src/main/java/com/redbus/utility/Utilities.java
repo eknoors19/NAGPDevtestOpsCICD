@@ -29,50 +29,7 @@ public class Utilities {
 	public static final int IMPLICIT_WAIT_TIME=10;
 	public static final int PAGE_LOAD_TIME=10;
 	
-	public static Object[][] getTestDatafromExcel(String sheetName)
-	{
-		File excelFile = new File(System.getProperty("user.dir")+"\\src\\main\\java\\com\\redbus\\testdata\\AmazTestData.xlsx"); 
-		XSSFWorkbook workbook = null;
-		
-		try {
-			FileInputStream fisExcel= new FileInputStream(excelFile);
-			workbook = new XSSFWorkbook(fisExcel);
-		}catch(Throwable e)
-		{
-			e.printStackTrace();
-		}
-		
-		XSSFSheet sheet= workbook.getSheet(sheetName);
-		int rows= sheet.getLastRowNum();
-		int cols= sheet.getRow(0).getLastCellNum();
-		
-		Object[][] data = new Object[rows][cols];
-		
-		for(int i=0; i< rows; i ++)
-		{
-			XSSFRow row= sheet.getRow(i+1);
-			for (int j=0; j< cols; j++)
-			{
-				XSSFCell cell= row.getCell(j);
-				CellType cellType= cell.getCellType();
-				 
-				switch(cellType) {
-				
-				case STRING:
-					data[i][j] = cell.getStringCellValue();
-					break;
-				case NUMERIC:
-					data[i][j] = Integer.toString((int)cell.getNumericCellValue());
-					break;
-				case BOOLEAN:
-					data[i][j] = cell.getBooleanCellValue();
-					break;	
-		
-				}	
-			}
-		}
-		return data;
-	}
+	
 	
 	public static void navigateToLogin(WebDriver driver) throws Exception
 	{
@@ -104,51 +61,17 @@ public class Utilities {
 		
 	}
 	
-	public static String captureScreenshot(WebDriver driver, String testName)
-	{
-		File srcScreenshot= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		String destinationScreenshotPath= System.getProperty("user.dir")+"\\Screenshots\\"+testName+".png";
-		File destinationScreenshot = new File (destinationScreenshotPath);
-		try {
-			FileHandler.copy(srcScreenshot, destinationScreenshot);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return destinationScreenshotPath;
-	}
+	/*
+	 * public static String captureScreenshot(WebDriver driver, String testName) {
+	 * File srcScreenshot=
+	 * ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); String
+	 * destinationScreenshotPath=
+	 * System.getProperty("user.dir")+"\\Screenshots\\"+testName+".png"; File
+	 * destinationScreenshot = new File (destinationScreenshotPath); try {
+	 * FileHandler.copy(srcScreenshot, destinationScreenshot); } catch (IOException
+	 * e) { e.printStackTrace(); } return destinationScreenshotPath; }
+	 */
 	
-	public static boolean isElementPresent(WebElement locatorKey) throws NoSuchElementException {
-	    try {
-	    	locatorKey.isDisplayed();
-	        return true;
-	    } catch (org.openqa.selenium.NoSuchElementException e) {
-	        return false;
-	    }
-	}
 	
-	public static boolean isElementDisplayed(WebElement elementIdentifier) 
-	  { try
-	  { if (elementIdentifier.isDisplayed()) 
-	  	{ return true; 
-	  	} 
-	  	else 
-	  	{ return false;
-	  } 
-	  } catch (Exception e) 
-	  { return false; 
-	  } 
-	  }
-	public static boolean waitForElementClickable(WebDriver driver, String locatorKey) throws NoSuchElementException {
-	    try {
-	    	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-	    	WebElement ele= wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locatorKey)));
-	    	if(ele.isEnabled())
-	    		return true;
-	    	else
-	    		return false;
-	    } catch (org.openqa.selenium.NoSuchElementException e) {
-	        return false;
-	    }
-	}
 
 }

@@ -40,6 +40,10 @@ public class BaseClass {
 		{
 			e.printStackTrace();
 		}
+		finally
+        {
+            System.out.println("finally block executed");
+        }
 		
 		try {
 			FileInputStream dataFis = new FileInputStream(dataPropFile);
@@ -48,6 +52,10 @@ public class BaseClass {
 		{
 			e.printStackTrace();
 		}
+		finally
+        {
+            System.out.println("finally block executed");
+        }
 		
 	}
 	

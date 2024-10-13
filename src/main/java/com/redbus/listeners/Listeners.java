@@ -49,9 +49,9 @@ public class Listeners implements ITestListener{
 			e.printStackTrace();
 		}
 		
-		String destinationScreenshotPath= Utilities.captureScreenshot(driver, testName);
+		//String destinationScreenshotPath= Utilities.captureScreenshot(driver, testName);
 		
-		extentTest.addScreenCaptureFromPath(destinationScreenshotPath);
+		//extentTest.addScreenCaptureFromPath(destinationScreenshotPath);
 		extentTest.log(Status.INFO, result.getThrowable());
 		extentTest.log(Status.FAIL, testName + " got failed");
 		System.out.println(testName + " got failed");
