@@ -1,5 +1,7 @@
 package com.redbus.listeners;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -18,7 +20,12 @@ public class Listeners implements ITestListener{
 	
 	@Override
 	public void onStart(ITestContext context) {
-		extentReport=ExtentReporter.generateExtentReport();
+		try {
+			extentReport=ExtentReporter.generateExtentReport();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		System.out.println("Execution of Project Test Started");
 	}
 	

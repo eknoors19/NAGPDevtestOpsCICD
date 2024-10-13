@@ -2,6 +2,7 @@ package com.redbus.utility;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Date;
 import java.util.Properties;
 
@@ -11,7 +12,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ExtentReporter {
 	
-	public static ExtentReports generateExtentReport()
+	public static ExtentReports generateExtentReport() throws IOException
 	{
 		ExtentReports extentReport = new ExtentReports();
 		Date d=new Date();
@@ -52,12 +53,19 @@ public class ExtentReporter {
 		Properties configProp = new Properties();
 		File configPropFile = new File(System.getProperty("user.dir")+"\\src\\main\\java\\com\\redbus\\config\\config.properties");
 		
+		FileInputStream fisConfigProp =null;
 		try {
-			FileInputStream fisConfigProp = new FileInputStream(configPropFile);
+			 fisConfigProp = new FileInputStream(configPropFile);
 			configProp.load(fisConfigProp);
 		}catch(Throwable e) {
 			e.printStackTrace();
 		}
+		finally
+        {
+            System.out.println("finally block executed");
+            if (fisConfigProp != null)
+            	fisConfigProp.close();
+        }
 		extentReport.setSystemInfo("Application URL", configProp.getProperty("url"));
 		extentReport.setSystemInfo("Browser Name", configProp.getProperty("browserName"));
 		extentReport.setSystemInfo("Email", configProp.getProperty("validEmail"));
