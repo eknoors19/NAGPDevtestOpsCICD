@@ -2,7 +2,6 @@ package com.redbus.listeners;
 
 import java.io.IOException;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -44,25 +43,25 @@ public class Listeners implements ITestListener{
 		
 	}
 
-	@Override
-	public void onTestFailure(ITestResult result) {
-		String testName = result.getName();
-		
-		System.out.println("ScreenShot Taken");
-		@SuppressWarnings("unused")
-		WebDriver driver=null;
-		try {
-			driver = (WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
-		} catch (IllegalArgumentException | IllegalAccessException | NoSuchFieldException | SecurityException e) {
-			
-		}
-		
-		
-		extentTest.log(Status.INFO, result.getThrowable());
-		extentTest.log(Status.FAIL, testName + " got failed");
-		System.out.println(testName + " got failed");
-		System.out.println("Reason for Failure: "+result.getThrowable());
-	}
+	//@Override
+	/*
+	 * public void onTestFailure(ITestResult result) { String testName =
+	 * result.getName();
+	 * 
+	 * System.out.println("ScreenShot Taken"); //@SuppressWarnings("unused")
+	 * //WebDriver driver=null; try { WebDriver driver =
+	 * (WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").
+	 * get(result.getInstance()); } catch (IllegalArgumentException |
+	 * IllegalAccessException | NoSuchFieldException | SecurityException e) {
+	 * 
+	 * }
+	 * 
+	 * 
+	 * extentTest.log(Status.INFO, result.getThrowable());
+	 * extentTest.log(Status.FAIL, testName + " got failed");
+	 * System.out.println(testName + " got failed");
+	 * System.out.println("Reason for Failure: "+result.getThrowable()); }
+	 */
 
 	@Override
 	public void onFinish(ITestContext context) {

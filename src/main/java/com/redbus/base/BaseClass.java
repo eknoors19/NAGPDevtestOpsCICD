@@ -42,7 +42,7 @@ public class BaseClass {
 		}
 		finally
         {
-            System.out.println("finally block executed");
+            //System.out.println("finally block executed");
             if (fis != null)
                 fis.close();
         }
@@ -57,7 +57,7 @@ public class BaseClass {
 		}
 		finally
         {
-            System.out.println("finally block executed");
+            //System.out.println("finally block executed");
             if (dataFis != null)
             	dataFis.close();
         }
