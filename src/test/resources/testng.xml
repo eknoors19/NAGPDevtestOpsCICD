@@ -9,8 +9,8 @@
     <classes>	 
       
       <class name="com.redbus.testcases.AmazLandingPageTest"/>
-      <class name="com.redbus.testcases.AmazSearchTest"/>
-      <class name="com.redbus.testcases.AmazAddToCartTest"/>
+      <class name="com.redbus.testcases.CalculatorTest"/>
+      
 	  
     </classes>
   </test> <!-- Test -->
