@@ -20,6 +20,12 @@ pipeline{
       }
     }
  
+ 	stage("TestNGReport"){
+      steps{
+       testNG()
+      }
+    }
+    
     stage("SonarQube"){
       steps{
         withSonarQubeEnv("TestSonarQube"){
