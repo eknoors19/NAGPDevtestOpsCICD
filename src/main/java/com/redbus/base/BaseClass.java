@@ -49,8 +49,9 @@ public class BaseClass {
                 fis.close();
         }
 		
+		FileInputStream dataFis =null;
 		try {
-			FileInputStream dataFis = new FileInputStream(dataPropFile);
+			 dataFis = new FileInputStream(dataPropFile);
 			dataProp.load(dataFis);
 		}catch(Throwable e)
 		{
@@ -59,6 +60,8 @@ public class BaseClass {
 		finally
         {
             System.out.println("finally block executed");
+            if (dataFis != null)
+            	dataFis.close();
         }
 		
 	}
